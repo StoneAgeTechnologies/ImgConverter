@@ -8,12 +8,25 @@ namespace ImgConverter
     {
         public static void Main(string[] args)
         {
-            var src = @"C:\temp\Images\";
-            var dest = @"C:\temp\Output";
+
+        }
+
+        public static void TestImageUtils(string[] args)
+        {
+            var src = @"C:\temp\img\input";
+            var dest = @"C:\temp\img\output";
 
             var iu = new ImageUtils(src);
             iu.ConvertToImage(dest);
         }
-        
+
+        public static void MergePdfTest()
+        {
+            var src = @"C:\temp\pdf\input";
+            var dest = @"c:\temp\pdf\output\merged.pdf";
+
+            var pu = new PdfUtils(src);
+            pu.MergePdfDocuments(dest);
+        }
     }
 }
